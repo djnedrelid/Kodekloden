@@ -4,3 +4,5 @@ Et lite prosjekt ment til inspirasjon til barn som kan være interessert i progr
 
 Utfordringene tar utgangspunkt i ekte JavaScript som av natur har en generisk syntaks, 
 benyttet i mange av dagens IT løsninger, og kan bidra til forståelse for generell programmering.
+
+[Start / Begynn her](djnedrelid.github.io/Kodekloden/)
