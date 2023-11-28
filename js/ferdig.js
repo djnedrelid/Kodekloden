@@ -1,65 +1,65 @@
-/*
+ï»¿/*
 	ferdig.js - Her finner du:
 	JavaScript kode for vandre-funksjonalitet til Kristine-figur.
 	
 	Hele kodekloden er i sin helhet produsert av, og vertet hos: 
-	Dag J Nedrelid <dj@thronic.com>, © 2007 - 2022 thronic.com
+	Dag J Nedrelid <dj@thronic.com>, Â© 2007 - 2022 thronic.com
 	
 	
-	Denne siden er direkte i ANSI format, slik at ÆØÅ viser greit.
-	Vanligvis vil man bruke UTF-8, når man kan fortelle nettleser 
-	at man faktisk gjør det, via HTML meta taggen i <head>.
+	Denne siden er direkte i ANSI format, slik at Ã†Ã˜Ã… viser greit.
+	Vanligvis vil man bruke UTF-8, nÃ¥r man kan fortelle nettleser 
+	at man faktisk gjÃ¸r det, via HTML meta taggen i <head>.
 	
 	Her finner du en blanding av det som er introdusert i oppgavene, 
 	sammen med litt nytt, kommentert etterhvert som det blir brukt. 
 	
-	Prøv gjerne å forstå hvordan det fungerer, husk også å vise 
-	kildekoden til nettsiden for å se hvordan HTML koden jobber 
-	sammen med JavaScript. Hvis du ser nøye, vil du se at denne 
+	PrÃ¸v gjerne Ã¥ forstÃ¥ hvordan det fungerer, husk ogsÃ¥ Ã¥ vise 
+	kildekoden til nettsiden for Ã¥ se hvordan HTML koden jobber 
+	sammen med JavaScript. Hvis du ser nÃ¸ye, vil du se at denne 
 	filen er inkludert i <script> taggen inne i <head> taggen. 
 	Slik vet den om koden!
 	
 	
 	Hva er HTML?
-	HTML er bare formatering, en måte å bestemme hvordan ting 
+	HTML er bare formatering, en mÃ¥te Ã¥ bestemme hvordan ting 
 	skal vises. Men ved hjelp av <script> taggen, kan man bruke 
-	JavaScript sammen med det for å gjøre nettsider "levende" :)
+	JavaScript sammen med det for Ã¥ gjÃ¸re nettsider "levende" :)
 	
 	
-	JavaScript kalles for et frontend språk, fordi det fungerer 
+	JavaScript kalles for et frontend sprÃ¥k, fordi det fungerer 
 	bare i nettleseren din. Hvis det skal snakke til en server, 
-	må man ha et serverside (backend) språk og skript eller 
-	tjeneste som lytter til hva frontend språket sier. Men det er 
-	ikke så viktig akkurat nå, all kode her er 100% frontend. 
+	mÃ¥ man ha et serverside (backend) sprÃ¥k og skript eller 
+	tjeneste som lytter til hva frontend sprÃ¥ket sier. Men det er 
+	ikke sÃ¥ viktig akkurat nÃ¥, all kode her er 100% frontend. 
 	
-	Hvis vi skulle lagret poeng eller noe annet, måtte vi snakket 
+	Hvis vi skulle lagret poeng eller noe annet, mÃ¥tte vi snakket 
 	med backend til en database. Da hadde jeg brukt f.eks. PHP. :)
 	
 	
 	Du kan gjerne kopiere hele denne og HTML koden til skrivebordet 
-	ditt og gjøre endringer og leke som du vil med den. Du trenger 
-	kun notepad/notisblokk for å gjøre endringer! Jeg bruker selv 
+	ditt og gjÃ¸re endringer og leke som du vil med den. Du trenger 
+	kun notepad/notisblokk for Ã¥ gjÃ¸re endringer! Jeg bruker selv 
 	notepad++, enkelt via https://ninite.com/notepadplusplus/ 
 */
 
 /*
 	Jeg bytter litt mellom kommentartypene // og /* som eksempler.
-	Så kan du vurdere selv hvilken du liker best i din egen kode. :) 
+	SÃ¥ kan du vurdere selv hvilken du liker best i din egen kode. :) 
 */
 
 
 
 //
 //	Matrise for beinmodeller som brukes under vandring og hopping.
-//	Jeg bruker tegn, siden det er bare ment som en gøy illustrasjon.
+//	Jeg bruker tegn, siden det er bare ment som en gÃ¸y illustrasjon.
 //	I et virkelig spill hadde jeg nok foretrukket bilder og grafikk.
 //
-//	Du lurer kanskje på hvorfor \ står dobbelt som \\ noen plasser.
-//	Dette er fordi \ egentlig er et "escape" spesialtegn for å få 
-//	språket til å ignorere/behandle følgende tegn som bokstavelig.
-//	Siden vi faktisk vil vise \, må vi bruke tegnet på seg selv!
+//	Du lurer kanskje pÃ¥ hvorfor \ stÃ¥r dobbelt som \\ noen plasser.
+//	Dette er fordi \ egentlig er et "escape" spesialtegn for Ã¥ fÃ¥ 
+//	sprÃ¥ket til Ã¥ ignorere/behandle fÃ¸lgende tegn som bokstavelig.
+//	Siden vi faktisk vil vise \, mÃ¥ vi bruke tegnet pÃ¥ seg selv!
 //
-//	Du lurer kanskje også på \n. Det betyr bare "ny linje". :)
+//	Du lurer kanskje ogsÃ¥ pÃ¥ \n. Det betyr bare "ny linje". :)
 //	Sammen med HTML taggen <pre> blir visningen da enkel og riktig.
 //
 var BeinModeller = [
@@ -84,7 +84,7 @@ var BeinModeller = [
  '            '],
 
 //
-//	Beinmodeller for høyre-vandring.
+//	Beinmodeller for hÃ¸yre-vandring.
 //
 ['     /\\    \n'+
  '    /--\\   \n'+
@@ -110,7 +110,7 @@ var BeinModeller = [
  '            '],
  
  //
- //	Beinmodell for stillestående.
+ //	Beinmodell for stillestÃ¥ende.
  //
 ['     /\\    \n'+
  '    /--\\   \n'+
@@ -121,17 +121,17 @@ var BeinModeller = [
  
 //
 //	Trykkeregister. Brukt av StartVandrer().
-//	Det er VandreCMD() sin jobb å holde styr på statusene.
+//	Det er VandreCMD() sin jobb Ã¥ holde styr pÃ¥ statusene.
 //
-//	Dette er en slags variabel, kalt for array på engelsk.
+//	Dette er en slags variabel, kalt for array pÃ¥ engelsk.
 //	Det er en rekke av verdier, i dette tilfellet en matrise 
 //	som betyr rekke av rekker (multidimensjonell). 
 //
-//	Disse brukes litt forskjellig, men finnes i nesten alle språk!
-//	Det finnes også mer avanserte versjoner. Lister er nyttige verktøy!
+//	Disse brukes litt forskjellig, men finnes i nesten alle sprÃ¥k!
+//	Det finnes ogsÃ¥ mer avanserte versjoner. Lister er nyttige verktÃ¸y!
 //
 var TrykkeRegister = [
-	// Navn på taster.
+	// Navn pÃ¥ taster.
 	['KeyW','KeyA','KeyS','KeyD',
 	'ArrowUp','ArrowLeft','ArrowDown','ArrowRight'],
 	
@@ -144,16 +144,16 @@ var TrykkeRegister = [
 // Diverse variabler.
 var KristineHoppeAksjon = false;	// Gir beskjed til StartVandrer om nye hopp.
 var KristineHarLandet = true;		// Gir beskjed til StartVandrer om aktivt hopp.
-var KristineBildeRetning = 1;		// 0 = bilde mot venstre, 1 = bilde mot høyre.
+var KristineBildeRetning = 1;		// 0 = bilde mot venstre, 1 = bilde mot hÃ¸yre.
 var Gravitasjon = 1;			// Brukes i KristineHopp() funksjonen.
 
 
 
 /*
-	Hovedfunksjon. Denne lytter etter hva vandreren skal gjøre.
-	I et vanlig spill hadde man gjerne brukt en WHILE sløyfe for å holde den gående, 
-	men på en nettside passer det litt bedre å få den til å kalle seg selv igjen.
-	Jeg gjør dette ved å bruke JavaScript sin egen funksjon: setTimeout().
+	Hovedfunksjon. Denne lytter etter hva vandreren skal gjÃ¸re.
+	I et vanlig spill hadde man gjerne brukt en WHILE slÃ¸yfe for Ã¥ holde den gÃ¥ende, 
+	men pÃ¥ en nettside passer det litt bedre Ã¥ fÃ¥ den til Ã¥ kalle seg selv igjen.
+	Jeg gjÃ¸r dette ved Ã¥ bruke JavaScript sin egen funksjon: setTimeout().
 */
 function StartVandrer() {
  
@@ -173,12 +173,12 @@ function StartVandrer() {
 	'KristineBildeRetning = '+ KristineBildeRetning +'\n'+
 	'KristineHoppeAksjon = '+ KristineHoppeAksjon +'\n'+
 	'KristineHarLandet = '+ KristineHarLandet +'\n'+
-	'TrykkeRegister = [Opp, Venstre, Ned, Høyre]\n'+ 
+	'TrykkeRegister = [Opp, Venstre, Ned, HÃ¸yre]\n'+ 
 	'                 ['+ 
 	TrykkeRegister[1][0] +', '+ TrykkeRegister[1][1] +', '+ 
 	TrykkeRegister[1][2] +', '+ TrykkeRegister[1][3] +']';
 
-	// Ikke gå videre hvis Kristine er midt i et hopp eller en vandring.
+	// Ikke gÃ¥ videre hvis Kristine er midt i et hopp eller en vandring.
 	if (!KristineHarLandet) {
 		FortsettVandrer();
 		return;
@@ -217,7 +217,7 @@ function StartVandrer() {
 		}
 	}
 	
-	// Vis stillestående beinmodell hvis ingen vandring utføres.
+	// Vis stillestÃ¥ende beinmodell hvis ingen vandring utfÃ¸res.
 	if (
 		TrykkeRegister[1][0] == 0 && 
 		TrykkeRegister[1][1] == 0 && 
@@ -234,14 +234,14 @@ function StartVandrer() {
 
 
 //
-//	Hjelpefunksjon for å kontinuerlig kalle StartVandrer().
-//	Ved å ha denne er det kun 1 plass jeg trenger å justere timeout.
+//	Hjelpefunksjon for Ã¥ kontinuerlig kalle StartVandrer().
+//	Ved Ã¥ ha denne er det kun 1 plass jeg trenger Ã¥ justere timeout.
 //
 function FortsettVandrer() {
 	/* 
 		Vanligvis bruker man en WHILE loop i spill, men siden 
 		dette er javascript og en internettside, passer det 
-		greiere å kalle funksjonen uendelig for å hindre låsing.
+		greiere Ã¥ kalle funksjonen uendelig for Ã¥ hindre lÃ¥sing.
 	*/
 	setTimeout(StartVandrer, 20);
 }
@@ -261,27 +261,27 @@ function Vandre(retning) {
 	var kristinekode = document.getElementById('kristinekode');
 	var Posisjon = KristineVandrerBoks.getBoundingClientRect();
 	var KristineVandreBilde = document.getElementById('KristineVandreBilde');
-	var BeinModell = 0; // Brukes til å sette retningstypen av beinmodeller.
+	var BeinModell = 0; // Brukes til Ã¥ sette retningstypen av beinmodeller.
 	
 	
 	BeinModell = (KristineBildeRetning == 1 ? 1 : 0);
 	/*
-		Oi... Denne var ny antar jeg? :? kalles for en ternær operator.
-		Det er i dette tilfellet akkurat det samme som å skrive koden:
+		Oi... Denne var ny antar jeg? :? kalles for en ternÃ¦r operator.
+		Det er i dette tilfellet akkurat det samme som Ã¥ skrive koden:
 		
 		if (KristineBildeRetning == 1)
 			BeinModell = 1;
 		else 
 			BeinModell = 0;
 			
-		Jeg kommer til å bruke denne tilfeldig som eksempel, 
-		den er veldig nyttig for å spare plass ved mye IF/ELSE.
+		Jeg kommer til Ã¥ bruke denne tilfeldig som eksempel, 
+		den er veldig nyttig for Ã¥ spare plass ved mye IF/ELSE.
 	*/
 	
 	//
 	// Bytter mellom 3 beintyper med jevne mellomrom, 
-	// for å skape en enkel animasjon under vandring.
-	// Timeren fungerer ganske enkelt ved å benytte 
+	// for Ã¥ skape en enkel animasjon under vandring.
+	// Timeren fungerer ganske enkelt ved Ã¥ benytte 
 	// samme beintype et visst antall ganger.
 	//
 	switch(retning) {
@@ -303,7 +303,7 @@ function Vandre(retning) {
 			break;
 			
 		case 'hoyre':
-			// Flytt Kristine til høyre.
+			// Flytt Kristine til hÃ¸yre.
 			KristineVandrerBoks.style.left = (Posisjon.left + 5) +'px';
 			KristineVandreBilde.src = 'grafikk/kristine-kokk-1.png';
 			KristineBildeRetning = 1;
@@ -320,7 +320,7 @@ function Vandre(retning) {
 	else if (VandreBeinTypeTimer <= 15)
 		KristineVandrerBein.innerHTML = BeinModeller[BeinModell][2];
 	
-	// Nullstill beintype til første igjen når alle er brukt.
+	// Nullstill beintype til fÃ¸rste igjen nÃ¥r alle er brukt.
 	if (VandreBeinTypeTimer >= 15)
 		VandreBeinTypeTimer = 0;
 	else
@@ -330,20 +330,20 @@ function Vandre(retning) {
  
  
 //
-//	Hjelpefunksjon for å passe på at lytteboksen for tastetrykk er aktiv.
-//	I HTML koden får jeg nettsiden til å kjøre denne hver gang det klikkes.
+//	Hjelpefunksjon for Ã¥ passe pÃ¥ at lytteboksen for tastetrykk er aktiv.
+//	I HTML koden fÃ¥r jeg nettsiden til Ã¥ kjÃ¸re denne hver gang det klikkes.
 //
 function VandreCMDFokus() {
 	document.getElementById('VandreCMD').focus();
 
-	// Pass på at boksen har fokus selv om man klikker et sted på siden.
+	// Pass pÃ¥ at boksen har fokus selv om man klikker et sted pÃ¥ siden.
 	document.onclick = function (){document.getElementById('VandreCMD').focus(); };
 }
 
 
 
 //
-//	Denne funksjonen tilkalles når det skjer et tastetrykk i VandreCMD input boksen.
+//	Denne funksjonen tilkalles nÃ¥r det skjer et tastetrykk i VandreCMD input boksen.
 //
 function VandreCMD(e, tasteretning) {	
 
@@ -353,12 +353,12 @@ function VandreCMD(e, tasteretning) {
 		// Vask/vedlikehold av input boksen.
 		document.getElementById('VandreCMD').value = '';
 		
-		// Husker du FOR sløyfen? :) Her bruker jeg den 
-		// for å avregistrere knapp som har vært trykket.
+		// Husker du FOR slÃ¸yfen? :) Her bruker jeg den 
+		// for Ã¥ avregistrere knapp som har vÃ¦rt trykket.
 		for (var a = 0; a < 8; a++) {
 			if (TrykkeRegister[0][a] == e.code) {
 				
-				// Ta høyde for at vi har 8 taster men kun 4 av/på moduser,
+				// Ta hÃ¸yde for at vi har 8 taster men kun 4 av/pÃ¥ moduser,
 				// siden de 8 tastene deler funksjon (WASD og piltaster).
 				if (a > 3)
 					TrykkeRegister[1][a-4] = 0;
@@ -371,7 +371,7 @@ function VandreCMD(e, tasteretning) {
 	
 	/*
 	   Husker du kontrollstrukturen SWITCH? :)
-	   Når vi skal se etter hvilken tast som trykkes, er den veldig nyttig.
+	   NÃ¥r vi skal se etter hvilken tast som trykkes, er den veldig nyttig.
 	*/
 	switch(e.code) {
 		case 'KeyW':
@@ -407,13 +407,13 @@ function VandreCMD(e, tasteretning) {
 /*
 	Hoppefunksjon.
 	
-	Denne kan se litt vanskelig ut ved første øyekast på grunn av en gravitasjonseffekt 
-	jeg valgte å lage, slik at hoppet ser litt mer naturlig ut. Variabelen Gravitasjon 
-	ser hvor høyt hun er i luften, og HoppFaktor bruker dette for å bestemme hvor mange 
+	Denne kan se litt vanskelig ut ved fÃ¸rste Ã¸yekast pÃ¥ grunn av en gravitasjonseffekt 
+	jeg valgte Ã¥ lage, slik at hoppet ser litt mer naturlig ut. Variabelen Gravitasjon 
+	ser hvor hÃ¸yt hun er i luften, og HoppFaktor bruker dette for Ã¥ bestemme hvor mange 
 	piksler om gangen det skal brukes i bevegelse.
 	
-	Jeg har også benyttet avrunding og begrensning av desimaler.
-	En relativt grei introduksjon til grunnleggende håndtering av tall, håper jeg. :)
+	Jeg har ogsÃ¥ benyttet avrunding og begrensning av desimaler.
+	En relativt grei introduksjon til grunnleggende hÃ¥ndtering av tall, hÃ¥per jeg. :)
 */
 function KristineHopp(hoyde, faller) {
 	
@@ -426,12 +426,12 @@ function KristineHopp(hoyde, faller) {
 	// Diverse variabler.
 	var HoppeHastighet = 20;
 	var HoppFaktor = 4;
-	Gravitasjon = (100 - hoyde) / 100;			// Går fra 1 - 0 ved oppover-hopp.
+	Gravitasjon = (100 - hoyde) / 100;			// GÃ¥r fra 1 - 0 ved oppover-hopp.
 	Gravitasjon = (Gravitasjon < 0.1 ? 0.1 : Gravitasjon);	// Begrens minimum gravitasjon.
 	HoppFaktor *= Gravitasjon.toFixed(1);			// Ta i bruk gravitasjon.
 	
-	// Sjekk om det vandres til venstre eller høyde. 
-	// Få evt. hoppet til å bevege seg i samme retning.
+	// Sjekk om det vandres til venstre eller hÃ¸yde. 
+	// FÃ¥ evt. hoppet til Ã¥ bevege seg i samme retning.
 	if (TrykkeRegister[1][1] == 1)
 		Vandre('venstre');
 	else if (TrykkeRegister[1][3] == 1) 
@@ -440,25 +440,25 @@ function KristineHopp(hoyde, faller) {
 		KristineVandrerBein.innerHTML = BeinModeller[2][0];
 	
 	
-	// På vei opp i luften.
+	// PÃ¥ vei opp i luften.
 	if (hoyde < 100 && !faller) {
 		KristineHarLandet = false;
 		KristineVandrerBoks.style.top = (Posisjon.top - HoppFaktor) +'px';
 		setTimeout(function(){ KristineHopp(hoyde + HoppFaktor, false); }, HoppeHastighet);
 		
-	// Truffet maks høyde og på tide å begynne fall!
+	// Truffet maks hÃ¸yde og pÃ¥ tide Ã¥ begynne fall!
 	} else if (hoyde >= 100 && !faller) {
 		KristineHarLandet = false;
 		KristineVandrerBoks.style.top = (Posisjon.top + HoppFaktor) +'px';
 		setTimeout(function(){ KristineHopp(hoyde - HoppFaktor, true); }, HoppeHastighet);
 	
-	// På vei nedover i luften.
+	// PÃ¥ vei nedover i luften.
 	} else if (hoyde < 100 && hoyde > 0 && faller) {
 		KristineHarLandet = false;
 		KristineVandrerBoks.style.top = (Posisjon.top + HoppFaktor) +'px';
 		setTimeout(function(){ KristineHopp(hoyde - HoppFaktor, true); }, HoppeHastighet);
 		
-	// Endelig på bakken igjen!
+	// Endelig pÃ¥ bakken igjen!
 	} else if (hoyde <= 0 && faller) {
 		KristineHarLandet = true;
 		KristineHoppeAksjon = false;
