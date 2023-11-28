@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/felles.js" type="text/javascript"></script>
+<script src="js/utfordring3.js" type="text/javascript"></script>
+<title>Kodekloden - Utfordring 3</title>
+</head>
+<body>
+
+<div id="main">
+<h2 id="velkommen">Velkommen til utfordring 3!</h2><br>
+
+<h2>Det neste vi skal ta en kikk på er funksjoner!</h2><br>
+
+Kristine fikk masse hjelp med pizzaen sin og fikk til slutt en skikkelig PIZZApizza som smakte nydelig!<br>
+Siden du har vist deg å være en dyktig programmerer så langt, stoler Kristine på deg til å hjelpe med mer koding!<br><br>
+
+Kristine har allerede laget masse funksjoner for å forberede en pizza, men hun lurer på om du kan pakke inn alle funksjoner i FiksAlt(), 
+slik at hun slipper å kjøre alle hver for seg, hver gang hun baker? Hun har allerede gjort litt av kodingen ferdig, men trenger hjelp til 
+å fullføre det siden hun holder på å bake en ny PIZZApizza!<br><br>
+
+<img src="grafikk/kristine-kokk-1.png" style="float:left"><br>
+<div style="text-align:left" id="utfordring_vindu">
+<img src="grafikk/pizza_overstekt.png" style="display:none" id="OverstektPizza">
+<img src="grafikk/pizza_nydelig.png" style="display:none" id="NydeligPizza">
+<b>Kristine's Pizzaoppskriftskode!</b><br>
+<textarea id="kristinekode" spellcheck="false" style="height:210px">
+// FLYTT resten av disse funksjonene inn i den nye Fiks Alt funksjonen!
+FiksSteketid();
+FiksStekevarme();
+
+// Ny funksjon.
+function FiksAlt() {
+	InnenforFiksAlt = true;
+	FiksDeigtype();
+}
+
+// Enklere å kalle kun 1 funksjon!
+FiksAlt();
+</textarea><br>
+
+<canvas id="testcanvas" width="650" height="200" style="display:none"></canvas>
+<input type="button" value="Test Kode" onclick="PizzaDeigKode()" id="kjorkodeknapp"> 
+<div id="LastSidePaaNytt"></div>
+</div>
+<div style="clear:both"></div><br><br>
+
+<fieldset>
+<legend>Tips og Hint!</legend>
+Husk å FLYTTE koden inn i den nye <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">funksjonen</a> (ikke bare kopier den). 😉
+</fieldset>
+
+</div><br><br>
+
+<script>Velkommen(true,true);</script>
+<div id="footer"><a href="/kodekloden/">Kodekloden</a> | Laget av Dag J Nedrelid | <a href="https://thronic.com" target="_blank">thronic.com</a></div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/felles.js" type="text/javascript"></script>
+<script src="js/utfordring2.js" type="text/javascript"></script>
+<title>Kodekloden - Utfordring 2</title>
+</head>
+<body>
+
+<div id="main">
+<h2 id="velkommen">Velkommen til utfordring 2!</h2><br>
+
+<h2>Det neste vi skal ta en kikk på er sløyfer!</h2><br>
+
+Nedenfor har vi fortsatt kokken som heter Kristine!<br><br>
+
+Kristine har nå fått hjelp med pizzaen sin og er sikker på at det blir skikkelig PIZZApizza og ikke BOLLEpizza!<br>
+Men nå har hun et nytt problem. Pizzaen skal stekes i til sammen <b>20</b> minutter på <b>200</b> grader. <br>
+Hun trenger hjelpen din til å sjekke om stekeprogrammet klart for det!?<br><br>
+
+<img src="grafikk/kristine-kokk-1.png" style="float:left"><br>
+<div style="text-align:left" id="utfordring_vindu">
+<img src="grafikk/pizza_overstekt.png" style="display:none" id="OverstektPizza">
+<img src="grafikk/pizza_nydelig.png" style="display:none" id="NydeligPizza">
+<b>Kristine's Pizzaoppskriftskode!</b><br>
+<textarea id="kristinekode" spellcheck="false" style="height:250px">
+StekeMinutterTid_1 = 5;
+StekeMinutterTid_2 = 15;
+StekeMinutterVarme = 500;
+ 
+Stoppeklokke = 0;
+while (Stoppeklokke < StekeMinutterTid_1) 
+{
+	Stoppeklokke = Stoppeklokke + 1;
+	TotalSteketidBrukt = TotalSteketidBrukt + 2;
+}
+
+for (var Stoppeklokke = 0; Stoppeklokke < StekeMinutterTid_2; Stoppeklokke++) 
+{
+	TotalSteketidBrukt = TotalSteketidBrukt + 4;
+}
+</textarea><br>
+
+<div id="TidViser"></div>
+<canvas id="testcanvas" width="650" height="200" style="display:none"></canvas>
+<input type="button" value="Test Kode" onclick="PizzaDeigKode()" id="kjorkodeknapp"> 
+<div id="LastSidePaaNytt"></div>
+</div>
+<div style="clear:both"></div><br><br>
+
+<fieldset>
+<legend>Tips og Hint!</legend>
+<a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">FOR</a> og <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank">WHILE</a> er de 2 mest brukte sløyfene i de fleste programmeringsspråk.<br>
+WHILE typen har også en DoWhile variant, men den er mindre brukt, og er enkel å lære seg senere!<br><br>
+
+Den første sløyfen (WHILE) skal telle antall minutter som er lagret i variabelen <code>StekeMinutterTid_1</code>.<br>
+Den andre sløyfen (FOR) skal telle resten, antall minutter som er lagret i variabelen <code>StekeMinutterTid_2</code>.<br><br>
+
+Til sammen skal det bli 20 minutter som Kristine trenger! TIPS: Sjekk alle variabler og verdier!<br>
+Begge sløyfene samarbeider om å lagre dette i variabelen <code>TotalSteketidBrukt</code>.<br><br>
+
+Husk å justere varmen også!<br><br><br>
+
+<b>Tegn-forklaringer:</b><br>
+Tegnet <b><code>&lt;</code></b> sjekker om det på venstre siden er MINDRE ENN det på høyre side.<br>
+Tegnet <b><code>++</code></b> betyr å plusse på sin egen variabel med 1 i neste sløyfe-runde.<br><br><br>
+
+
+Som du kanskje har skjønt allerede, duger WHILE perfekt til enkle behov, men FOR er ofte den beste!<br>
+WHILE må ha Stoppeklokke1 på utsiden av seg selv, mens FOR alltid har sin egen innebygget variabel!<br><br>
+
+Hvis du er en luring, kan du faktisk også ta en snarvei ved å kode kun 2 variabler!<br>
+Da jukser du også med å forstå sløyfer, men ta det gjerne som en ekstra utfordring!
+</fieldset>
+</div><br><br>
+
+<script>Velkommen(true,true);</script>
+<div id="footer"><a href="/kodekloden/">Kodekloden</a> | Laget av Dag J Nedrelid | <a href="https://thronic.com" target="_blank">thronic.com</a></div>
+</body>
+</html>

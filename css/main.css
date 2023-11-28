@@ -1,0 +1,120 @@
+BODY {
+	margin: 0px;
+	padding: 10px;
+	font-family: arial;
+	font-size: 18px;
+}
+
+PRE {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+	font-size: 18px;
+}
+
+H2, H3 {
+	font-family: arial;
+	margin: 0px;
+}
+
+A {
+	color: blue;
+}
+
+A:HOVER {
+	text-decoration: none;
+}
+
+INPUT {
+	font-family: 'Courier New', monospace;
+	font-size: 18px;
+	width: 100px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 2px dashed #666;
+	font-weight: bold;
+	outline: none;
+	background-color: #e9ffff;
+}
+
+#kjorkodeknapp {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	width: 150px;
+}
+
+#LastSidePaaNytt {
+	display: inline;
+	font-size: 13px;
+}
+
+#info_om_klasser {
+	background-color: yellow;
+	padding: 20px;
+	border: 1px solid #333;
+	cursor: help;
+	position: absolute;
+	width: 920px;
+}
+
+CODE {
+	font-family: 'Courier New', monospace;
+}
+
+#main {
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#utfordring_vindu {
+	float: right;
+	width: 650px;
+}
+
+#kristinekode {
+	width: 630px;
+	height: 150px;
+	padding: 10px;
+	font-size: 13px;
+	font-family: 'Courier New', monospace;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+#testcanvas {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+#footer{
+	font-size: 11px;
+	color: #333;
+	font-style: italic;
+	font-family: verdana;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	clear: both;
+	text-align: center;
+}
+
+FIELDSET {
+	
+}
+
+LEGEND {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.table_1_lcol { 
+	text-align: right;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.table_1_rcol {
+	text-align: left;
+	padding-left: 3px;
+	padding-bottom: 10px;
+}

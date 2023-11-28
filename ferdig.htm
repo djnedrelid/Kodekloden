@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/ferdig.css" rel="stylesheet" type="text/css">
+<script src="js/felles.js" type="text/javascript"></script>
+<script src="js/ferdig.js" type="text/javascript"></script>
+<title>Kodekloden - Ferdig!</title>
+</head>
+<body>
+
+<div id="main">
+<h2 id="velkommen">Gratulerer hvis du kom hit ved å fullføre alle utfordringene!</h2><br>
+
+Kristine er kjempeglad for all kodehjelpen hun har fått! Du er helt ferdig, bra jobbet!<br>
+Mens du har hjulpet Kristine med pizzakode, har hun i all hemmelighet <b>KODET SINE EGNE BEIN!</b><br><br>
+
+<div id="KristineVandrerBoks">
+	<img id="KristineVandreBilde" src="grafikk/kristine-kokk-1.png"><br>
+	<pre id="KristineVandrerBein">
+		
+	</pre>
+	<!-- Lytteboks for tastetrykkene WASD for vandring og SPACE for hopping. -->
+	<input type="text" id="VandreCMD" size="1" maxlength="1" onkeydown="VandreCMD(event,'ned')" onkeyup="VandreCMD(event,'opp')">
+</div><br>
+
+<div style="text-align:left" id="utfordring_vindu">
+<img src="grafikk/pizza_overstekt.png" style="display:none" id="OverstektPizza">
+<img src="grafikk/pizza_nydelig.png" style="display:none" id="NydeligPizza">
+<b>Bruk WASD eller Piltaster, og Space, for å ta med Kristine på en gåtur!</b><br>
+<textarea id="kristinekode" spellcheck="false" style="height:200px" readonly></textarea><br>
+
+<fieldset style="text-align:center">
+<legend>Tips og Hint!</legend>
+Kunnskap kommer fra nysgjerrighet og tålmodighet, <br>
+og hvem som helst som bruker nok tid, kan lære seg koding!<br><br>
+
+Det tar tid å lære seg koding, det er helt normalt, jeg lærer fremdeles! <br>
+Det gøye er når du har lært nok til å begynne å bruke det kreativt!<br><br>
+
+En god idé er å planlegge et lite prosjekt,<br> 
+da lærer man ofte både raskere og mer målrettet.<br><br>
+
+Klikk <a href="js/ferdig.js" target="_blank">her</a> hvis du vil se vandrekoden som brukes på denne siden.<br>
+Høyreklikk også på siden og velg "Vis kildekode" for å vise HTML koden.<br><br>
+
+Språket som er brukt her er i hovedsak <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> sammen med <a href="https://www.w3schools.com/html/">HTML</a>.<br>
+Dette brukes hovedsaklig for nettside-koding, men JavaScript har syntaks basert på C/C++ som brukes til f.eks. spillprogrammering.<br><br>
+ 
+Det trenger ingen kompilering og er enkelt å komme i gang med.<br>
+Det er derfor et godt utgangspunkt for noen som vil prøve seg på koding.
+</fieldset>
+</div>
+<div style="clear:both"></div><br><br>
+
+</div><br><br>
+
+<script>Velkommen(true,true);</script>
+<script>StartVandrer();</script>
+<script>VandreCMDFokus();</script>
+<div id="footer"><a href="/kodekloden/">Kodekloden</a> | Laget av Dag J Nedrelid | <a href="https://thronic.com" target="_blank">thronic.com</a></div>
+</body>
+</html>

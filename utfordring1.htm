@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/felles.js" type="text/javascript"></script>
+<script src="js/utfordring1.js" type="text/javascript"></script>
+<title>Kodekloden - Utfordring 1</title>
+</head>
+<body>
+
+<div id="main">
+<h2 id="velkommen">Velkommen til utfordring 1!</h2><br>
+<h2>Det første du skal ta en kikk på er variabler!</h2><br>
+
+Nedenfor har vi en kokk som heter Kristine!<br><br>
+
+Kristine elsker å bake Pizza, men er i dag litt forvirret, og er i ferd med å bake bolledeig i stedet for pizzadeig!<br>
+Sist gang dette skjedde syntes Pappa dette var kjempegodt, men barna vil fikse det! Kan du hjelpe?<br><br>
+
+<img src="grafikk/kristine-kokk-1.png" style="float:left"><br><br>
+<div style="text-align:left" id="utfordring_vindu">
+<b>Kristine's Pizzaoppskriftskode!</b><br>
+<textarea id="kristinekode" spellcheck="false">
+Deigtype1 = 'Bolledeig';
+Deigtype2 = 'Pizzadeig';
+Deigvalg = Deigtype1;
+</textarea><br>
+
+<canvas id="testcanvas" width="650" height="200" style="display:none"></canvas>
+<input type="button" value="Test Kode" onclick="PizzaDeigKode()" id="kjorkodeknapp"> 
+<div id="LastSidePaaNytt"></div>
+</div>
+<div style="clear:both"></div><br><br>
+
+<fieldset>
+<legend>Tips og Hint!</legend>
+Denne oppgaven kan løses på 2 måter!<br><br>
+
+1) Sjekk om variabelen <code>Deigvalg</code> holder riktig referanse til en annen variabel som har riktig verdi.<br><br>
+
+2) Fortell variabelen <code>Deigvalg</code> verdien direkte!<br><br>
+
+<b>HUSK:</b> Tekstverdier må være pakket inn i '' eller "" tegn, sånn som 'dette'.<br><br>
+
+I programmering er det også viktig å holde styr på store og små bokstaver!
+</fieldset>
+</div><br><br>
+
+<script>Velkommen(true,true);</script>
+<div id="footer"><a href="/kodekloden/">Kodekloden</a> | Laget av Dag J Nedrelid | <a href="https://thronic.com" target="_blank">thronic.com</a></div>
+</body>
+</html>

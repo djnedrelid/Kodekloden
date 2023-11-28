@@ -1,0 +1,12 @@
+#KristineVandrerBoks {
+	position: absolute;
+}
+
+#VandreCMD {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}

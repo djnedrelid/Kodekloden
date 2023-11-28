@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/felles.js" type="text/javascript"></script>
+<script src="js/utfordring4.js" type="text/javascript"></script>
+<title>Kodekloden - Utfordring 4</title>
+</head>
+<body>
+
+<div id="main">
+<h2 id="velkommen">Velkommen til utfordring 4!</h2><br>
+
+<h2>Det neste vi skal ta en kikk på er kontrollstrukturer!</h2><br>
+
+Nå er du på del 4, den siste utfordringen! Kristine har laget kode for å sende familien melding om middag,<br>
+men den funker ikke og hun trenger din hjelp til å finne ut hvorfor, se om du klarer å hjelpe henne!<br><br>
+
+<img src="grafikk/kristine-kokk-1.png" style="float:left"><br>
+<div style="text-align:left" id="utfordring_vindu">
+<img src="grafikk/pizza_overstekt.png" style="display:none" id="OverstektPizza">
+<img src="grafikk/pizza_nydelig.png" style="display:none" id="NydeligPizza">
+<b>Kristine's Pizzaoppskriftskode!</b><br>
+<textarea id="kristinekode" spellcheck="false" style="height:360px">
+SettMegTilSantHvisPizzaErFerdig = false;
+
+// Kontrollstruktur av typen IF/ELSE.
+if (SettMegTilSantHvisPizzaErFerdig == true) {
+	BeskjedKanSendes = 1;
+} else {
+	BeskjedKanSendes = 3;
+}
+
+// Kontrollstruktur av typen SWITCH.
+switch (BeskjedKanSendes) {
+	case 1:
+		break;
+		
+	case 2:
+		SendBeskjedTilAlle_KomOgSpisMiddag();
+		break;
+		
+	case 3:
+		break;
+		
+	default:
+}
+</textarea><br>
+
+<canvas id="testcanvas" width="650" height="200" style="display:none"></canvas>
+<input type="button" value="Test Kode" onclick="PizzaDeigKode()" id="kjorkodeknapp"> 
+<div id="LastSidePaaNytt"></div>
+</div>
+<div style="clear:both"></div><br><br>
+
+<fieldset>
+<legend>Tips og Hint!</legend>
+Kontrollstrukturene <a href="https://www.w3schools.com/jsref/jsref_if.asp" target="_blank">IF/ELSE</a> og <a href="https://www.w3schools.com/js/js_switch.asp" target="_blank">SWITCH</a> er de vanligste man bruker i programmering.<br>
+De er ganske logiske, prøv å se om du klarer å forstå hva de gjør!<br><br>
+
+<b>true</b> og <b>false</b> verdier må skrives med små bokstaver i dette kodespråket! <br><br>
+
+<b>TIPS:</b> I denne testen kreves det at den første variabelen faktisk er sann! Pizza er jo ferdig!<br>
+Juster kontrollstrukturene if/else og switch til å oppføre seg riktig deretter!
+</fieldset>
+
+</div><br><br>
+
+<script>Velkommen(true,true);</script>
+<div id="footer"><a href="/kodekloden/">Kodekloden</a> | Laget av Dag J Nedrelid | <a href="https://thronic.com" target="_blank">thronic.com</a></div>
+</body>
+</html>
